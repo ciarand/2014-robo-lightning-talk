@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>2014 Robo Lightning Talk</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" media="screen" href="css/dist.css">
+    </head>
+    <body>
+        <div class="deck-container">
+            
+                <article class="slide">
+                    <h1>hello</h1>                </article>
+
+            
+                <article class="slide">
+                    <h1>this is a lightning talk</h1>                </article>
+
+            
+                <article class="slide">
+                    <h1>what is a task runner?</h1>                </article>
+
+            
+                <article class="slide">
+                    <h2>Examples</h2>
+<ul>
+<li>Make (GNU, BSD, etc.)</li>
+<li>Phing</li>
+<li>Apache Ant</li>
+<li>Symfony / Artisan</li>
+<li>Shell scripts</li>
+</ul>                </article>
+
+            
+                <article class="slide">
+                    <h2>Arguments against some of these</h2>
+<ul>
+<li>XML is not a programming language</li>
+<li>One-class-per-task is often overkill</li>
+<li>Shell scripts don't understand PHP</li>
+</ul>                </article>
+
+            
+                <article class="slide">
+                    <h1>robo</h1>                </article>
+
+            
+                <article class="slide">
+                    <h1>Robo is a task runner for PHP</h1>                </article>
+
+            
+                <article class="slide">
+                    <!-- forgive me for this -->
+<iframe src="http://robo.li/" style="width: 100%; height: 1000px;">
+    Loading the Robo.li site…
+</iframe>                </article>
+
+            
+                <article class="slide">
+                    <h1>An example</h1>                </article>
+
+            
+                <article class="slide">
+                    <pre><code class="language-php">/**
+ * @desc runs a web server
+ */
+public function serve()
+{
+    $this-&gt;taskServer(8000)-&gt;dir(__DIR__)-&gt;run();
+}</code></pre>                </article>
+
+            
+                <article class="slide">
+                    <pre><code class="language-php">/**
+ * @desc runs a server and regens on changes
+ */
+public function watch()
+{
+    $this-&gt;taskServer(8000)
+        -&gt;dir(__DIR__)
+        -&gt;background()
+        -&gt;run();
+
+    $this-&gt;taskWatch()-&gt;monitor(
+        ["pres.md", "template.php"],
+        function() {
+            $this-&gt;gen();
+        }
+    )-&gt;run();
+}</code></pre>                </article>
+
+            
+                <article class="slide">
+                    <h2>Other cool things it can do</h2>
+<ul>
+<li>phpunit</li>
+<li>parallel tasks</li>
+<li>git commands</li>
+<li>generate api docs in markdown</li>
+<li>parallel commands (phpunit in parallel)</li>
+<li>watch files and folders</li>
+<li>composer, bower</li>
+<li>run symfony / artisan commands</li>
+<li>ssh commands</li>
+<li>nice DSL over the builtin <code>proc_*</code> funcs</li>
+</ul>                </article>
+
+            
+                <article class="slide">
+                    <h1>Questions?</h1>                </article>
+
+            
+                <article class="slide">
+                    <h2>Who am I?</h2>
+<ul>
+<li>Code github.com/@ciarand on GitHub</li>
+<li>Tweet @ciarandowney</li>
+<li>Blog ciarand.me</li>
+</ul>                </article>
+
+            
+                <article class="slide">
+                    <h1>Want to see the full RoboFile used in this presentation?</h1>                </article>
+
+            
+                <article class="slide">
+                    <h1>github.com/ciarand/2014-robo-lightning-talk</h1>                </article>
+
+            
+            <p class="deck-status" aria-role="status">
+                <span class="deck-status-current"></span>
+                /
+                <span class="deck-status-total"></span>
+            </p>
+        </div>
+        <script src="js/dist.js"></script>
+    </body>
+</html>

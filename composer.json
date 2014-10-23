@@ -1,0 +1,7 @@
+{
+  "require": {
+    "codegyre/robo": "~0.4.6",
+    "erusev/parsedown-extra": "~0.2.2",
+    "phpunit/phpunit": "~4.3.4"
+  }
+}
