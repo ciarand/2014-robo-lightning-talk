@@ -1,3 +1,5 @@
+This project is deprecated and unmaintained. Proceed with caution!
+
 2014 Robo lightning talk
 ========================
 
